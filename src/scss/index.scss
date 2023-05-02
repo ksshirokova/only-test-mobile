@@ -37,100 +37,84 @@ body {
 
   main {
     @include size(320px, 100%);
-
+   
     margin: 0 auto;
-    padding: 59px 0 0 20px;
+    padding: 59px 0 13.33px 20px;
     position: relative;
     box-sizing: border-box;
+    background-color: #f4f5f9;
 
     h1 {
       @include text("PT Sans", 20px, normal, 120%, #42567a, 700);
       margin: 0;
       max-width: 123px;
-
-
-
-
-
-
     }
 
-
-.footer {
-  display: flex;
-    .buttons-container {
-
-      
-
-      .numbers {
-        @include text("PT Sans", 14px, normal, 18px, #42567a, 400);
-        margin: 0 0 10.67px;
-      }
-
-      .button {
-        border: 1px solid rgba(66, 86, 122, 0.1);
-        border-radius: 50%;
-        @include size(25px, 25px);
-        margin: 0 8.33px 0 0;
-        background-color: white;
-
-      }
-
-      .button_disabled {
-        border: 1px solid rgba(66, 86, 122, 0.1);
-        border-radius: 50%;
-        @include size(25px, 25px);
-        margin: 0 8.33px 0 0;
-        background-color: white;
-        opacity: 0.5;
-
-      }
-
-      
-    }
-    .dots-container {
+    .footer {
       display: flex;
-      align-items: center;
-      margin-left: 38.67px;
+      margin-top: 78px;
+      .buttons-container {
+        .numbers {
+          @include text("PT Sans", 14px, normal, 18px, #42567a, 400);
+          margin: 0 0 10.67px;
+        }
 
-      .dot {
-        background-color: #42567A;
-        @include size(6px, 6px);
-        border-radius: 50%;
-        margin-right: 10px;
-      }
+        .button {
+          border: 1px solid rgba(66, 86, 122, 0.5);
+          border-radius: 50%;
+          @include size(25px, 25px);
+          margin: 0 8.33px 0 0;
+          background-color: white;
+        }
 
-      .dot_disabled {
-        background-color: #42567A;
-        opacity: 0.4;
-        @include size(6px, 6px);
-        border-radius: 50%;
-        margin-right: 10px;
+        .button_disabled {
+          border: 1px solid rgba(66, 86, 122, 0.1);
+          border-radius: 50%;
+          @include size(25px, 25px);
+          margin: 0 8.33px 0 0;
+          background-color: white;
+          opacity: 0.5;
+        }
       }
-    }
-  }
-    .category {
-      position: absolute;
-      top: 228px;
-      left: 956px;
-      @include text("PT Sans", 20px, normal, 30px, #42567a, 700);
+      .dots-container {
+        display: flex;
+        align-items: center;
+        margin-left: 38.67px;
+
+        .dot {
+          background-color: #42567a;
+          @include size(6px, 6px);
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+
+        .dot_disabled {
+          background-color: #42567a;
+          opacity: 0.4;
+          @include size(6px, 6px);
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+      }
     }
 
     .years {
       display: flex;
       margin: 56px 0 0 0;
-      padding-bottom: 57px;
+      padding-bottom: 40px;
       border-bottom: 1px solid rgba(66, 86, 122, 0.1);
       max-width: 273px;
+      justify-content: space-between;
 
       h3 {
         margin: 0;
       }
 
-      justify-content: space-between;
+      
 
       .first-year {
         @include text("PT Sans", 56px, normal, 73px, #5d5fef, 700);
+
         margin: 0;
       }
 
@@ -141,34 +125,25 @@ body {
     }
 
     .slider-container {
-
       display: flex;
       margin-top: 20px;
+      overflow: hidden;
 
-      .button {
-        border: 1px solid rgba(66, 86, 122, 0.1);
-        border-radius: 50%;
-        @include size(40px, 40px);
-        margin: 40px 0 0 auto;
-        background-color: white;
-      }
+      
 
       .slider {
         display: flex;
-        width: 300px;
-        overflow: hidden;
         margin: 0;
 
         .swiper-container {
-          max-width: 191px;
-          height: 200px;
-          overflow: hidden;
-          opacity: 0;
+          max-width: 200px;
 
           .slider-content {
             p {
               @include text("PT Sans", 14px, normal, 145%, #42567a, 400);
-              margin-right: 25px;
+              padding-right: 25px;
+              margin: 0;
+              height: 80px;
             }
 
             h3 {
@@ -176,10 +151,12 @@ body {
               margin: 0 0 15px;
             }
           }
+
+          .swiper-slide-next {
+            opacity: 0.4;
+          }
         }
       }
     }
-
-
   }
 }

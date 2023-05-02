@@ -29,44 +29,13 @@ export default function TimeBlock() {
 
   const [thirdDeg, setThirdDeg] = useState<number>(60);
 
-  let tl = gsap.timeline();
+  
 
   let firstYear = data[0].year;
   let secondYear = data[data.length - 1].year;
 
-  const mouseEnter = (circleRef: any, numberRef: any) => {
-    tl.to(circleRef.current, {
-      scale: 4,
-      width: "19px",
-      height: "19px",
-      duration: 0.5,
-      backgroundColor: "#fff",
-    });
-
-    tl.to(numberRef.current, {
-      opacity: 1,
-      duration: 0.2,
-    });
-  };
-
-  const mouseLeave = (circleRef: any, numberRef: any) => {
-    tl.to(circleRef.current, {
-      scale: 1,
-      duration: 0.5,
-      backgroundColor: "#42567A",
-
-      width: "4px",
-      height: "4px",
-    });
-    tl.to(
-      numberRef.current,
-      {
-        opacity: 0,
-        duration: 0.5,
-      },
-      "-=0.5"
-    );
-  };
+  
+  
 
   const rotateNumbers = (deg: number) => {
     gsap.to(numberOne.current, {
@@ -167,7 +136,6 @@ export default function TimeBlock() {
         </h3>
       </div>
       <Slider data={data} />
-      {/* <p className="category">{name}</p> */}
       <section className="footer">
       <div className="buttons-container">
         <p className="numbers">0{number}/06</p>
@@ -176,7 +144,7 @@ export default function TimeBlock() {
           onClick={rotateBack}
         >
           <svg width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4.7489 1.04178L1.6239 4.16678L4.7489 7.29178" stroke="#42567A" stroke-width="2"/>
+<path d="M4.7489 1.04178L1.6239 4.16678L4.7489 7.29178" stroke="#42567A" strokeWidth="2"/>
 </svg>
         </button>
         <button
@@ -184,7 +152,7 @@ export default function TimeBlock() {
           onClick={rotateForward}
         >
           <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1.58386 1.04178L4.70886 4.16678L1.58386 7.29178" stroke="#42567A" stroke-width="2"/>
+<path d="M1.58386 1.04178L4.70886 4.16678L1.58386 7.29178" stroke="#42567A" strokeWidth="2"/>
 </svg>
         </button>
         
